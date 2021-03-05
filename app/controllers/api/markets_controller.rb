@@ -2,11 +2,15 @@
 module Api
   class MarketsController < BaseController
     def index
-      render json: [], status: :ok
+      markets = Market.all
+
+      render json: markets.to_json(include: :items), status: :ok
     end
 
     def show
-      render json: {}, status: :ok
+      market = Market.find(params[:id])
+
+      render json: market.to_json(include: :items), status: :ok
     end
   end
 end
