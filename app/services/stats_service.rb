@@ -6,7 +6,7 @@ class StatsService
     @bonds = Bepro::RealitioErc20ContractService.new.get_bond_events
   end
 
-  def stats
+  def get_stats
     # TODO: volume chart
     # TODO: TVL chart
 

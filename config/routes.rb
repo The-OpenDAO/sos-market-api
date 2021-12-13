@@ -32,7 +32,7 @@ Rails.application.routes.draw do
     end
 
     resources :articles, only: [:index]
-
+    resources :stats, only: [:index]
     resources :whitelist, only: [:show]
 
     if !Rails.env.production?
