@@ -22,5 +22,25 @@ module Bepro
         finalize_ts: question_data[4].to_i
       }
     end
+
+    def get_bond_events(question_id: nil, user: nil)
+      events = get_events(
+        event_name: 'LogNewAnswer',
+        filter: {
+          question_id: question_id,
+          user: user,
+        }
+      )
+
+      events.map do |event|
+        {
+          user: event['returnValues']['user'],
+          question_id: event['returnValues']['question_id'],
+          answer: event['returnValues']['answer'],
+          value: from_big_number_to_float(event['returnValues']['bond']),
+          timestamp: event['returnValues']['ts'].to_i,
+        }
+      end
+    end
   end
 end
