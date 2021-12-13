@@ -1,7 +1,7 @@
 class MediumService
   attr_accessor :uri, :list
 
-  def get_recent_articles
+  def get_latest_articles
     response = HTTP.get('https://medium.com/feed/@polkamarkets')
 
     unless response.status.success?
