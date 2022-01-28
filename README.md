@@ -1,6 +1,7 @@
-# Polkamarkets API
+# SOSMarkets API
 
-Polkamarkets is an Autonomous Prediction Market Protocol built for cross-chain information exchange and trading, based on Polkadot.
+We forked from Polkamarkets to build SOSMarkets.
+SOSMarkets is an Autonomous Prediction Market Protocol built for Ethereum.
 
 ## Project Setup
 
@@ -18,8 +19,8 @@ To allow env vars to be used in ruby:
 ### 2. Installing the app 
 
 ```
-git clone git@github.com:Polkamarkets/polkamarkets-api.git
-cd polkamarkets-api
+git clone https://github.com/The-OpenDAO/sos-market-api.git
+cd sos-market-api
 ```
 
 - Create `.envrc` file with env vars  
